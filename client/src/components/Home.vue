@@ -54,8 +54,8 @@
     methods: {
       handleClientClick() {
         this.selectedOption = "client";
+        this.showSignInClient = false;
         this.showSignUpClient = false;
-        this.showSignUpOwner = false;
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: "smooth",
@@ -63,7 +63,7 @@
       },
       handleOwnerClick() {
         this.selectedOption = "owner";
-        this.showSignUpClient = false;
+        this.showSignInOwner = false;
         this.showSignUpOwner = false;
         window.scrollTo({
           top: document.documentElement.scrollHeight,
@@ -75,6 +75,7 @@
       },
       handleSignUpClick() {
         this.showSignUpOwner = true;
+
       },
     },
   };

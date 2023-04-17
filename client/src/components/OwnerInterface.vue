@@ -11,14 +11,10 @@ export default {
             togleId: false,
             filteredClients: [],
             searchQuery: ""
-            
         }
-       
     },
     watch: {
-        
         showId() {
-          
             axios.get(`http://localhost:3001/api/getClient/${this.user.id_owner}`)
                 .then((res) => {
                     console.log(res.data)
@@ -30,20 +26,20 @@ export default {
         }
     },
     async mounted() {
-        
         try {
-
-            const clients = await axios.get(`http://localhost:3001/api/getClient/${this.user.id_owner}`);
-            const owners = await axios.get(`http://localhost:3001/api/getOneOwner/${this.user.id_owner}`);
-            const user = JSON.parse(localStorage.getItem('user'))
             
+           
+            const owners = await axios.get(`http://localhost:3001/api/getOneOwner/${this.user.id_owner}`);
+            
+            const user = JSON.parse(localStorage.getItem('user'))
             this.owner = owners.data
              this.user=user.data
-             console.log(this.user);
+             const clients = await axios.get(`http://localhost:3001/api/getClient/${this.user.id_owner}`);
+             console.log(this.user.id_owner);
+             console.log(owners, 'owners');
             this.clients = clients.data
             this.filteredClients = this.clients.filter((client) =>
                 client.first_name.toLowerCase().includes(this.searchQuery.toLowerCase())
-                
             );
         } catch (error) {
             console.log(error);
@@ -127,4 +123,3 @@ export default {
         </ul>
     </div>
 </template>
-<style scoped></style>

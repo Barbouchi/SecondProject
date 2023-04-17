@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import {createRouter,createWebHistory} from "vue-router"
 import App from "./App.vue"
 import './App.css'
-// Components 
+// Components
 import Home from '@/Components/Home.vue'
 import About from '@/Components/About.vue'
 import Contact from '@/Components/Contact.vue'
@@ -12,7 +12,6 @@ import SignInOwner from '@/Components/SignInOwner.vue'
 import SignUpOwner from '@/Components/SignUpOwner.vue'
 import ClientInterface from '@/Components/ClientInterface.vue'
 import OwnerInterface from '@/Components/OwnerInterface.vue'
-
 //-----------------
 const router =createRouter({
     history : createWebHistory(),
@@ -26,7 +25,13 @@ const router =createRouter({
         {path:'/sign-in-owner', name:'SignInOwner', component: SignInOwner},
         {path:'/sign-up-owner', name:'SignUpOwner', component: SignUpOwner},
         {path:'/client-interface', name:'ClientInterface', component: ClientInterface},
-        {path:'/owner-interface', name:'OwnerInterface', component: OwnerInterface}
+        {path:'/owner-interface', name:'OwnerInterface', component: OwnerInterface},
+        {
+            path: '/client-interface/:idclients',
+            name: 'ClientInterface',
+            component: () => import('./components/ClientInterface.vue'),
+            props: true
+          },
         ]
 })
 createApp(App).use(router).mount('#app')

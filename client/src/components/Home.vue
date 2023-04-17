@@ -11,13 +11,13 @@
       <div id="option-buttons">
         <img
           class="cl"
-          src="@/assets/1.png"
+          src="./1.png"
           alt="For client"
           @click="handleClientClick"
         />
         <img
           class="ow"
-          src="@/assets/2.png"
+          src="./2.png"
           alt="For owner"
           @click="handleOwnerClick"
         />

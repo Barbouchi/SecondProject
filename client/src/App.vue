@@ -1,11 +1,9 @@
-<script setup>
-import OwnerInterface from './components/OwnerInterface.vue';
-</script>
-
 <template>
- <OwnerInterface/>
-</template>
-
-<style scoped>
-
-</style>
+    <router-link to="/"> Home</router-link > 
+    <router-link to="/about"> about</router-link > 
+    <div>
+            <router-view></router-view>
+        </div>
+  </template>
+  
+  <script></script>

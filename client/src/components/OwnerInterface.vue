@@ -10,7 +10,8 @@ export default {
             showId: false,
             togleId: false,
             filteredClients: [],
-            searchQuery: ""
+            searchQuery: "",
+          
         }
     },
     watch: {
@@ -41,11 +42,16 @@ export default {
             this.filteredClients = this.clients.filter((client) =>
                 client.first_name.toLowerCase().includes(this.searchQuery.toLowerCase())
             );
+          
         } catch (error) {
             console.log(error);
         }
     },
     methods: {
+        historyOf(id_client){
+            console.log("here");
+            this.$router.push({name:'HistoryClient',query: { id_client:id_client,id_userr :this.user.id_owner  }  })
+        },  
         getAmount(event) {
             console.log(event.target.value);
             this.inputValue = event.target.value
@@ -72,20 +78,39 @@ export default {
             }
         },
         async handleIncreaseBalance(clientId) {
-            const toAdd = parseInt(this.inputValue);
+            try {
+                const toAdd = parseInt(this.inputValue);
             console.log('id', clientId, "balance to add", toAdd);
             const response = await axios.put(`http://localhost:3001/api/addBalance/${clientId}`, { balance: toAdd });
-            if (response) {
-                this.showId = !this.showId
+            this.showId = !this.showId
+            const history = await axios.post("http://localhost:3001/api/addTransaction",{
+                idclients:clientId,
+                id_owner:this.user.id_owner ,
+                balance:toAdd,
+                transaction_method:'+'
+            })
+            } catch (error) {
+                console.log(error);
             }
+           
         },
         async handleDecreaseBalance(clientId) {
-            const toSubtract = parseInt(this.inputValue);
+            try {
+                 const toSubtract = parseInt(this.inputValue);
             console.log('id', clientId, "balance to add", toSubtract);
             const response = await axios.put(`http://localhost:3001/api/retrieveBalance/${clientId}`, { balance: toSubtract });
-            if (response) {
                 this.showId = !this.showId
+                const history = await axios.post("http://localhost:3001/api/addTransaction",{
+                idclients:clientId,
+                id_owner:this.user.id_owner ,
+                balance:toSubtract,
+                transaction_method:'-'
+            })
+          
+            } catch (error) {
+                console.log(error);
             }
+           
         }
     }
 }
@@ -109,7 +134,9 @@ export default {
             <li v-for="(item, index ) in filteredClients" class="client-card" :key="index">
                 <div class="card-header">
                     <h3>{{ item.first_name }} {{ item.last_name }}</h3>
-                    <input type="button" value="X" class="delete-button" @click="handleDeleteClient(item.idclients)"><br>
+                    <input type="button" value="X" class="delete-button" @click="handleDeleteClient(item.idclients)">
+                    <input type="button" value="Show history"  @click="historyOf(item.idclients)">
+                    <br>
                 </div>
                 <div class="card-body">
                     <p>Debt: {{ item.balance }} Millimes</p>

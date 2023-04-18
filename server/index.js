@@ -8,7 +8,7 @@ const config= {
 
     host:"127.0.0.1",
     user:"root",
-    password:"chimonen3sal",
+    password:"root",
     database: "kardili"
 }
 const connection =mysql2.createConnection(config)
@@ -216,4 +216,44 @@ const inquiry=req.body.inquiry;
 
 app.listen(3001,()=>{
     console.log("running on port 3001")
+})
+
+
+
+//------------------------------ transaction history 
+
+
+app.post('/api/addTransaction',(req,res)=>{
+  const sqlInsert = "INSERT INTO transaction  set ?"
+  connection.query(sqlInsert,req.body,(err,result)=>{
+      if (err) {
+          console.log(err);
+          res.status(500).json({ error: 'Error inserting data into database.' });
+      } else {
+          res.status(201).json('inserted transaction');
+      }
+  });
+})
+
+app.get('/api/getTransactions',(req,res)=>{
+  const sqlInsert = "select * from transaction  "
+  connection.query(sqlInsert,(err,result)=>{
+    if (err) {
+        console.log(err);
+        res.status(500).json({ error: 'Error inserting data into database.' });
+    } else {
+        res.status(201).json(result);
+    }
+});
+})
+app.get('/api/getTransactions/:owner_id/:client_id',(req,res)=>{
+  const sqlInsert = "select * from transaction where idclients=? and id_owner=? "
+  connection.query(sqlInsert,[req.params.client_id,req.params.owner_id],(err,result)=>{
+    if (err) {
+        console.log(err);
+        res.status(500).json({ error: 'Error inserting data into database.' });
+    } else {
+        res.status(201).json(result);
+    }
+});
 })

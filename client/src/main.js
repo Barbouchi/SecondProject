@@ -12,6 +12,7 @@ import SignInOwner from '@/Components/SignInOwner.vue'
 import SignUpOwner from '@/Components/SignUpOwner.vue'
 import ClientInterface from '@/Components/ClientInterface.vue'
 import OwnerInterface from '@/Components/OwnerInterface.vue'
+import HistoryClient from '@/Components/HistoryClient.vue'
 //-----------------
 const router =createRouter({
     history : createWebHistory(),
@@ -26,6 +27,7 @@ const router =createRouter({
         {path:'/sign-up-owner', name:'SignUpOwner', component: SignUpOwner},
         {path:'/client-interface', name:'ClientInterface', component: ClientInterface},
         {path:'/owner-interface', name:'OwnerInterface', component: OwnerInterface},
+        {path:'/clientHistory', name:'HistoryClient', component: HistoryClient},
         {
             path: '/client-interface/:idclients',
             name: 'ClientInterface',

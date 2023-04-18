@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+
+body {
+  background-image: url("https://media.tenor.com/sorHkexPZDwAAAAC/particles.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
 * {
   
     margin: 0;
@@ -434,7 +444,8 @@ body {
     .cl{
 
 width: 400px;
-margin-right: 550px;
+margin-right: 390px;
+margin-left: 180px;
 clip-path: circle(100% at center);
 transition: transform 0.3s ease-in-out;
 opacity: 0.9;
@@ -442,13 +453,14 @@ border-radius: 20px;
 border: 3px solid rgb(255, 255, 255);
 margin-bottom: 110px;
 margin-top: 80px;
+height:300px;
     }
     .cl:hover {
  transform: scale(1.1); 
     }
 
     .ow{
-
+      height:300px;
 width: 400px;
 clip-path: circle(100% at center);
   transition: transform 0.3s ease-in-out;
@@ -816,12 +828,18 @@ clip-path: circle(100% at center);
 }
 
 
-
-
 .logout{
-  margin-left: 1000px;
-  margin-top: -10px;
+  background-color: #1f87f7; 
+  margin-left: 1300px;
+  margin-top: 9px;
 }
+
+
+
+
+
+
+
 
 
 .headOwner {
@@ -998,17 +1016,53 @@ margin-left: 665px;
   color: #004391;
 }
 
-.inputclients{
+/* .inputclients{
   max-width: 10000px;
   text-align: center;
   padding-bottom: 50px;
   padding-left: 700px;
   padding-right: 700px;
+} */
+
+/* .inputclients input {
+  text-align: center;
+} */
+
+.inputclients {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
-.inputclients input {
-  text-align: center;
+.inputclients label {
+  font-weight: normal;
+  margin-right: 10px;
 }
+
+.inputclients input[type="text"] {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.inputclients input[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
 
 
 .about-title{
@@ -1175,3 +1229,8 @@ font-size: 23px;
 .client-debt{
   font-size: 23px;
 }
+
+.search{
+  max-width: 600px;
+}
+

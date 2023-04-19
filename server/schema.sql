@@ -83,12 +83,12 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 -- owners
-INSERT INTO store_owner (first_name,last_name,email,password) VALUES ('John','Doe','john.doe@example.com','mypassword');
-INSERT INTO store_owner (first_name,last_name,email,password) VALUES ('Jane','Smith','jane.smith@example.com','password123');
+-- INSERT INTO store_owner (first_name,last_name,email,password) VALUES ('John','Doe','john.doe@example.com','mypassword');
+-- INSERT INTO store_owner (first_name,last_name,email,password) VALUES ('Jane','Smith','jane.smith@example.com','password123');
 
 -- client 
-INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('علي', 'أحمد', 'ali.ahmed@example.com', 'mypassword', 1);
-INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('فاطمة', 'محمد', 'fatima.mohammed@example.com', 'password123', 1);
-INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('يوسف', 'علي', 'youssef.ali@example.com', 'mypassword123', 1);
-INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('ريم', 'عمر', 'reem.omar@example.com', 'securepassword', 2);
-INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('عبدالله', 'حسن', 'abdullah.hassan@example.com', 'mypasswordsecure', 2);
+-- INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('علي', 'أحمد', 'ali.ahmed@example.com', 'mypassword', 1);
+-- INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('فاطمة', 'محمد', 'fatima.mohammed@example.com', 'password123', 1);
+-- INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('يوسف', 'علي', 'youssef.ali@example.com', 'mypassword123', 1);
+-- INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('ريم', 'عمر', 'reem.omar@example.com', 'securepassword', 2);
+-- INSERT INTO clients (first_name, last_name, email, password, store_owner_id_owner) VALUES ('عبدالله', 'حسن', 'abdullah.hassan@example.com', 'mypasswordsecure', 2);

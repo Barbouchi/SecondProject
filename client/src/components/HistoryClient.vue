@@ -21,8 +21,9 @@
   .transaction-table {
     font-family: Arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
+    width: 1000px;
+    margin-top: 100px;
+    margin-left: 500px;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }

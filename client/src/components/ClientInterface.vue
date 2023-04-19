@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button  @click="handleLogOut">LogOut</button>
+    <button class="logoutclient" @click="handleLogOut">LogOut</button>
     <div>
       <div v-if="isLoading">Loading... </div>
       <div v-else class="cardd">
@@ -17,7 +17,7 @@
           <h1 class="client-name">{{ user.first_name }} {{ user.last_name }}</h1>
           <p class="client-email">Email: {{ user.email }}</p>
           <p class="client-debt">Debt: {{ user.balance }}</p>
-          <p class="client-date">Registration date: {{ user.registration_date }}</p>
+       
         </div>
       </div>
     </div>

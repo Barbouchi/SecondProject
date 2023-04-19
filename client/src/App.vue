@@ -25,6 +25,24 @@
       </div>
     </nav>
     <router-view />
+    <footer class="footer">
+  Copyright &copy; Kerdini 2023 
+  <div class="social-icons">
+    <a href="https://www.facebook.com/jasser.melki.50/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/barboochitn/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://github.com/orgs/First-Senior-Project/dashboard" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://discord.com/invite/8vgTUTHNQX" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-discord"></i>
+    </a>
+  </div>
+</footer>
+
 
   </div>
   

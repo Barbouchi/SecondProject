@@ -127,15 +127,15 @@ export default {
         <h2 className='clientlist'>Your clients</h2>
         <div className='inputclients'>
             <label htmlFor="searchInput"></label>
-            <input placeholder='Search for a client  by his first name' type="text" v-model="searchQuery" />
-            <input type="button" value="search" @click="handleSearchInputChange">
+            <input class="inn" placeholder='Search for a client  by his first name' type="text" v-model="searchQuery" />
+            <input class="btt" type="button" value="search" @click="handleSearchInputChange">
         </div>
         <ul class="client-list">
             <li v-for="(item, index ) in filteredClients" class="client-card" :key="index">
                 <div class="card-header">
                     <h3>{{ item.first_name }} {{ item.last_name }}</h3>
-                    <input type="button" value="X" class="delete-button" @click="handleDeleteClient(item.idclients)">
-                    <input type="button" value="Show history"  @click="historyOf(item.idclients)">
+                    <input  type="button" value="Delete" class="delete-button" @click="handleDeleteClient(item.idclients)">
+                    <input type="button" value="Show history" class="show-button" @click="historyOf(item.idclients)">
                     <br>
                 </div>
                 <div class="card-body">

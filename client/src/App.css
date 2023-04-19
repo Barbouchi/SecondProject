@@ -2,7 +2,7 @@
 
 
 body {
-  background-image: url("https://media.tenor.com/sorHkexPZDwAAAAC/particles.gif");
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -276,7 +276,7 @@ body {
     .back-vedio{
       position: fixed;
       z-index: -1;
-      opacity: 0.85;
+      opacity: 0.69;
       width: 100%;
  
      right :0;
@@ -386,8 +386,19 @@ body {
       background-color: transparent;
       border: none;
       font-size: 20px;
-      color: #ff0000;
+      color: #ffffff;
       cursor: pointer;
+      display: inline-block;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #ba0000;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
     }
     
     
@@ -445,7 +456,7 @@ body {
 
 width: 400px;
 margin-right: 390px;
-margin-left: 180px;
+margin-left: 350px;
 clip-path: circle(100% at center);
 transition: transform 0.3s ease-in-out;
 opacity: 0.9;
@@ -660,6 +671,7 @@ clip-path: circle(100% at center);
 
 
 .tittle {
+  margin-left: 40px;
   color: goldenrod;
   padding-top: 20px;
   padding-bottom: 3px;
@@ -831,11 +843,20 @@ clip-path: circle(100% at center);
 .logout{
   background-color: #1f87f7; 
   margin-left: 1300px;
-  margin-top: 9px;
+  margin-top: 10px;
+  margin-left: 1645px;
 }
 
 
+.inn{
+  max-width: 500px;
+  
+}
 
+.btt{
+  background-color: #1f87f7;  
+  
+}
 
 
 
@@ -909,16 +930,28 @@ clip-path: circle(100% at center);
 
 }
 
+.footer {
+  padding-top: 6px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
 
 
 .about-container {
-  max-width: 8000px;
+  max-width: 6000px;
  
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0px;
-  bottom: 0;
-  padding-bottom: 300px;
+  margin-bottom: 0px;
+  padding-bottom: 100px;
   padding-top: 10px;
 
   text-align: center;
@@ -933,6 +966,8 @@ clip-path: circle(100% at center);
 }
 
 .about-text {
+  margin-left: 700px;
+  max-width: 500px;
   font-size: 20px;
   line-height: 1.5;
   margin-top: 50px;
@@ -1100,6 +1135,7 @@ margin-left: 665px;
 
 .cardd {
   position: relative;
+  text-align: center;
   width: 610px;
   height: 250px;
   margin-left: 650px ;
@@ -1234,3 +1270,33 @@ font-size: 23px;
   max-width: 600px;
 }
 
+.search:hover {
+  color: gold;
+}  
+
+.logoutclient{
+  background-color: #1f87f7; 
+  margin-left: 1300px;
+  margin-top: 10px;
+  margin-left: 1645px;
+}
+
+.client-interface{
+  padding-top: 42px;
+  padding-left: 20px;
+  
+}
+
+.show-button{
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}

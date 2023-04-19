@@ -3,7 +3,7 @@
       <h1 class="tittle">Welcome to Kerdini</h1>
       <h2 id="welcome-heading">
         &nbsp;&nbsp;&nbsp;&nbsp; <br />
-        Kerdini is the first free debt management platform <br />
+        &nbsp;&nbsp;&nbsp;Kerdini is the first free debt management platform <br />
         in the world, for business owners and their clients. <br />
         <span id="click-word">CLICK </span>
         on the photo that best represents you to get started today!
